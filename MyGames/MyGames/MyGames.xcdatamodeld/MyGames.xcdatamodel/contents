@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Console" representedClassName="Console" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="game" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Game" inverseName="console" inverseEntity="Game"/>
+    </entity>
+    <entity name="Game" representedClassName="Game" syncable="YES">
+        <attribute name="cover" optional="YES" attributeType="Transformable"/>
+        <attribute name="releaseDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="console" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Console" inverseName="game" inverseEntity="Console"/>
+    </entity>
+    <configuration name="ConfigurationConsole" usedWithCloudKit="YES">
+        <memberEntity name="Console"/>
+        <memberEntity name="Game"/>
+    </configuration>
+    <elements>
+        <element name="Console" positionX="-54" positionY="18" width="128" height="73"/>
+        <element name="Game" positionX="175.765625" positionY="-89.0703125" width="128" height="103"/>
+    </elements>
+</model>
